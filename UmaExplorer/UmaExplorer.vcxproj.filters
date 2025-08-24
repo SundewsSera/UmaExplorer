@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\proxy">
+      <UniqueIdentifier>{2f5f8047-7176-46ab-81fc-cf3c60564a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\il2cpp">
+      <UniqueIdentifier>{df924d6e-4949-425a-8e66-eed1df85ce76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{f623a310-eb96-4216-b7f5-21b653355cbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imgui">
+      <UniqueIdentifier>{8934e599-a045-475d-a021-630be8a3d0e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks">
+      <UniqueIdentifier>{f4e7bd5d-646c-40e6-8fd0-644bb1fb053f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{1292b2ca-acc9-41fb-8f05-d9cb056a4280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\egui">
+      <UniqueIdentifier>{4b492575-18a3-4cf1-a3d6-dac2f0a030e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks\mscorlib">
+      <UniqueIdentifier>{6fc01d12-7958-455f-a797-2cf473fc76c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks\mscorlib\System">
+      <UniqueIdentifier>{570ec21a-4d81-4ef1-bbc5-95761f17ea21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks\UnityEngine_CoreModule">
+      <UniqueIdentifier>{4c140466-1a9a-4324-905d-5aab644c7cdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks\UnityEngine_CoreModule\UnityEngine">
+      <UniqueIdentifier>{b386e513-e5b5-482b-a898-f7173f0cf23f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks\mscorlib\System_Reflection">
+      <UniqueIdentifier>{5fd97213-d153-46da-8ee3-55bffce5b6f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proxy.cpp">
+      <Filter>Source Files\proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="hook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp\il2cpp_symbols_resolver.cpp">
+      <Filter>Source Files\il2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="il2cpp\il2cpp_symbols.cpp">
+      <Filter>Source Files\il2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\hook_utils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="egui\egui.cpp">
+      <Filter>Source Files\egui</Filter>
+    </ClCompile>
+    <ClCompile Include="egui\egui_hierarchy.cpp">
+      <Filter>Source Files\egui</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\mscorlib\System\System_Type.cpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\mscorlib\System\System_Array.cpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_GameObject.cpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Object.cpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Transform.cpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Component.cpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="egui\egui_inspector_main.cpp">
+      <Filter>Source Files\egui</Filter>
+    </ClCompile>
+    <ClCompile Include="egui\egui_utils.cpp">
+      <Filter>Source Files\egui</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\mscorlib\System\System_Guid.cpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="egui\egui_inspector_sub.cpp">
+      <Filter>Source Files\egui</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\mscorlib\System\System_RuntimeType.cpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\mscorlib\System_Reflection\System_Reflection_PropertyInfo.cpp">
+      <Filter>Source Files\hooks\mscorlib\System_Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\mscorlib\System_Reflection\System_Reflection_Assembly.cpp">
+      <Filter>Source Files\hooks\mscorlib\System_Reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\common_utils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Material.cpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_MaterialPropertyBlock.cpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\globals.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version.def">
+      <Filter>Source Files\proxy</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="version.asm">
+      <Filter>Source Files\proxy</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\il2cpp_symbols_resolver.hpp">
+      <Filter>Source Files\il2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp\il2cpp_symbols.hpp">
+      <Filter>Source Files\il2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="hook.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\il2cpp_utils.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\hook_utils.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="egui\egui.h">
+      <Filter>Source Files\egui</Filter>
+    </ClInclude>
+    <ClInclude Include="egui\egui_hierarchy.h">
+      <Filter>Source Files\egui</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\mscorlib\System\System_Type.hpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\mscorlib\System\System_Array.hpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_GameObject.hpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Object.hpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Transform.hpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Component.hpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="egui\egui_inspector_main.h">
+      <Filter>Source Files\egui</Filter>
+    </ClInclude>
+    <ClInclude Include="egui\egui_utils.h">
+      <Filter>Source Files\egui</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\mscorlib\System\System_Guid.hpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\common_utils.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="egui\egui_inspector_sub.h">
+      <Filter>Source Files\egui</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\mscorlib\System\System_RuntimeType.hpp">
+      <Filter>Source Files\hooks\mscorlib\System</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\mscorlib\System_Reflection\System_Reflection_PropertyInfo.hpp">
+      <Filter>Source Files\hooks\mscorlib\System_Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\mscorlib\System_Reflection\System_Reflection_Assembly.hpp">
+      <Filter>Source Files\hooks\mscorlib\System_Reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_Material.hpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\UnityEngine_CoreModule\UnityEngine\UnityEngine_MaterialPropertyBlock.hpp">
+      <Filter>Source Files\hooks\UnityEngine_CoreModule\UnityEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\globals.h">
+      <Filter>Source Files\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UmaExplorer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
