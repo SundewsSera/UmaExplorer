@@ -114,7 +114,7 @@ std::unordered_map<std::string, std::string> resolve_il2cpp()
     //LoadIl2cpp会按顺序加载il2cpp符号，由此可获得混淆后的il2cpp函数名
     //如何知道加载顺序？需要一个没有被混淆il2cpp符号的UntiyPlayer.dll参考一下
 
-    const uint32_t START_RVA = 0x7834a2;
+    const uint32_t START_RVA = 0x782c92;
 
     std::vector<std::string> SYMBOL_LIST = {
         "il2cpp_init",
@@ -128,6 +128,8 @@ std::unordered_map<std::string, std::string> resolve_il2cpp()
         "il2cpp_set_config_utf16",
         "il2cpp_set_config",
         "il2cpp_set_memory_callbacks",
+        "il2cpp_memory_pool_set_region_size",
+        "il2cpp_memory_pool_get_region_size",
         "il2cpp_get_corlib",
         "il2cpp_add_internal_call",
         "il2cpp_resolve_icall",

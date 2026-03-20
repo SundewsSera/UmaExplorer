@@ -54,6 +54,7 @@ void CreateInspectorSubWindows()
 
 				void* _class = il2cpp_symbols::object_get_class(InspectorSubWindow->obj.obj);
 
+				
 				if (InspectorSubWindow->obj.typeName == "UnityEngine.Material")
 				{
 					if (InspectorSubWindow->obj.materialInfo.state == false)
@@ -118,16 +119,16 @@ void CreateInspectorSubWindows()
 						//printf("Get PropertyBlock Success!\n");
 						ImGui::SeparatorText("Material Property Block Info");
 						CreateMaterialPropertyBlockTable(InspectorSubWindow->obj, InspectorSubWindow->obj.alivecheck);
-						/*
-						for (int j = 0; j < InspectorSubWindow->obj.materialInfo.shader.shaderProperties.size(); j++)
-						{
-							int id = InspectorSubWindow->obj.materialInfo.shader.shaderProperties[j].id;
-							if (MaterialPropertyBlock_HasPropertyImpl_hook(mpb, id))
-							{
-								printf("True Property:%s\n", InspectorSubWindow->obj.materialInfo.shader.shaderProperties[j].name.c_str());
-							}
-						}
-						*/
+						
+						//for (int j = 0; j < InspectorSubWindow->obj.materialInfo.shader.shaderProperties.size(); j++)
+						//{
+						//	int id = InspectorSubWindow->obj.materialInfo.shader.shaderProperties[j].id;
+						//	if (MaterialPropertyBlock_HasPropertyImpl_hook(mpb, id))
+						//	{
+						//		printf("True Property:%s\n", InspectorSubWindow->obj.materialInfo.shader.shaderProperties[j].name.c_str());
+						//	}
+						//}
+						
 					}
 
 					if (InspectorSubWindow->obj.materialInfo.shader.state)
@@ -137,7 +138,7 @@ void CreateInspectorSubWindows()
 						CreateShaderPropertyTable(InspectorSubWindow->obj, InspectorSubWindow->obj.alivecheck);
 					}
 				}
-
+				
 
 				if (InspectorSubWindow->obj.typeName.rfind("[]") == InspectorSubWindow->obj.typeName.size() - 2)
 				{

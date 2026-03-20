@@ -29,6 +29,7 @@ void setup_hook_utils()
 	setup_UnityEngine_Material_GetColor();
 	setup_UnityEngine_Material_GetVector();
 	setup_UnityEngine_Material_GetFloat();
+	setup_UnityEngine_Material_GetTexture();
 	setup_UnityEngine_MaterialPropertyBlock_GetFloat();
 	setup_UnityEngine_MaterialPropertyBlock_GetColor();
 	setup_UnityEngine_MaterialPropertyBlock_GetVector();

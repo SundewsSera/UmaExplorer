@@ -102,6 +102,11 @@ void GetArray(ObjectInfo& base, void* obj, string type, void* _class, AliveCheck
 				string trueText = il2cpp_symbols::il2cpp_get_string(value);
 				TextColoredWrapped(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), trueText.c_str());
 			}
+			else if (type == "System.Int16")
+			{
+				short trueInt16 = *(short*)((int*)value + 4);
+				ImGui::TextWrapped(to_string(trueInt16).c_str());
+			}
 			else if (type == "System.Int32")
 			{
 				int trueInt32 = *((int*)value + 4);
@@ -282,6 +287,11 @@ void GetField(ObjectInfo& base, void* obj, void* _class, AliveCheckInfo aliveche
 			else if (fieldTypeName == "System.String") {
 				string trueText = il2cpp_symbols::il2cpp_get_string(value);
 				TextColoredWrapped(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), trueText.c_str());
+			}
+			else if (fieldTypeName == "System.Int16")
+			{
+				short trueInt16 = *(short*)((int*)value + 4);
+				ImGui::TextWrapped(to_string(trueInt16).c_str());
 			}
 			else if (fieldTypeName == "System.Int32") {
 				int trueInt32 = *((int*)value + 4);
@@ -515,6 +525,15 @@ void GetProperty(void* obj, void* _class, int* index, vector<void*> new_properti
 					{
 						string trueText = il2cpp_symbols::il2cpp_get_string(value);
 						TextColoredWrapped(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), trueText.c_str());
+					}
+				}
+				else if (propertyTypeName == "System.Int16")
+				{
+					value = property_hook(pro, obj);
+					if (value)
+					{
+						short trueInt16 = *(short*)((int*)value + 4);
+						ImGui::TextWrapped(to_string(trueInt16).c_str());
 					}
 				}
 				else if (propertyTypeName == "System.Int32")
@@ -800,6 +819,7 @@ void CreateArrayTable(ObjectInfo& obj, string type, void* _class, AliveCheckInfo
 	}
 }
 
+
 void GetShaderProperty(ObjectInfo& obj, AliveCheckInfo alivecheck, string path = "", int color = 0)
 {
 	for (int i = 0; i < obj.materialInfo.shader.shaderProperties.size(); i++)
@@ -876,6 +896,9 @@ void GetShaderProperty(ObjectInfo& obj, AliveCheckInfo alivecheck, string path =
 		{
 			ImGui::TableSetColumnIndex(1);
 			ImGui::TextWrapped("Texture");
+			//ImGui::TableSetColumnIndex(2);
+			//void* value = material_GetTexture_hook(obj.obj, id);
+			//ImGui::TextWrapped("0x%p", value);
 		}
 		else if (type == ShaderPropertyType::ShaderPropertyType_Int)
 		{
@@ -903,6 +926,7 @@ void CreateShaderPropertyTable(ObjectInfo& obj, AliveCheckInfo alivecheck, int i
 		ImGui::TreePop();
 	}
 }
+
 
 void GetMaterialBlockProperty(ObjectInfo& obj, AliveCheckInfo alivecheck, string path = "", int color = 0)
 {

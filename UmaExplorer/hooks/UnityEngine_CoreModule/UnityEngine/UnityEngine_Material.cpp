@@ -82,3 +82,24 @@ void setup_UnityEngine_Material_GetFloat()
 	MH_CreateHook((LPVOID)material_GetFloat_addr, material_GetFloat_hook, &material_GetFloat_orig);
 	MH_EnableHook((LPVOID)material_GetFloat_addr);
 }
+
+void* material_GetTexture_orig = nullptr;
+
+void* material_GetTexture_hook(void* _this, int nameid)
+{
+	void* ret = reinterpret_cast<decltype(material_GetTexture_hook)*>(material_GetTexture_orig)(_this, nameid);
+	return ret;
+}
+
+void setup_UnityEngine_Material_GetTexture()
+{
+	//¥”MaterialªÒ»°Float
+	auto material_GetTexture_addr = il2cpp_symbols::get_method_pointer_re(
+		"UnityEngine.CoreModule.dll", "UnityEngine",
+		"Material", "GetTexture", 1, 2
+	);
+
+	printf("material_GetTexture_addr at %p\n", material_GetTexture_addr);
+	MH_CreateHook((LPVOID)material_GetTexture_addr, material_GetTexture_hook, &material_GetTexture_orig);
+	MH_EnableHook((LPVOID)material_GetTexture_addr);
+}

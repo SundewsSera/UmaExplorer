@@ -155,70 +155,74 @@ void bootstrap_carrot_juicer()
 
 	il2cpp_symbols::init(il2cpp_module);
 
+	
 	auto unityplayer_module = GetModuleHandle(L"UnityPlayer_orig.dll");
 
 	printf("UnityPlayer_orig.dll at %p\n", unityplayer_module);
 
 	unity_base = (void*)unityplayer_module;
+	
 
 	setup_hook_utils();
 
 	//auto key_addr = il2cpp_resolve_icall("UnityEngine.Rendering.ShaderKeyword::GetGlobalKeywordIndex(System.String)");
 
-	auto key_addr = (void*)((uintptr_t)unityplayer_module + 0x655E00);
+	
+	auto key_addr = (void*)((uintptr_t)unityplayer_module + 0x653EC0);
 
 	printf("key_addr at %p\n", key_addr);
 
 	MH_CreateHook((LPVOID)key_addr, key_hook, &key_orig);
 	MH_EnableHook((LPVOID)key_addr);
 
-	auto localkey_addr = (void*)((uintptr_t)unityplayer_module + 0xB2F00);
+	auto localkey_addr = (void*)((uintptr_t)unityplayer_module + 0xB27C0);
 
 	printf("localkey_addr at %p\n", localkey_addr);
 
 	MH_CreateHook((LPVOID)localkey_addr, localkey_hook, &localkey_orig);
 	MH_EnableHook((LPVOID)localkey_addr);
 
-	auto Shader_GetPropertyCount_addr = (void*)((uintptr_t)unityplayer_module + 0xAF2E0);
+	auto Shader_GetPropertyCount_addr = (void*)((uintptr_t)unityplayer_module + 0xAEBA0);
 
 	printf("Shader_GetPropertyCount_addr at %p\n", Shader_GetPropertyCount_addr);
 
 	MH_CreateHook((LPVOID)Shader_GetPropertyCount_addr, Shader_GetPropertyCount_hook, &Shader_GetPropertyCount_orig);
 	MH_EnableHook((LPVOID)Shader_GetPropertyCount_addr);
 
-	auto Shader_GetPropertyName_addr = (void*)((uintptr_t)unityplayer_module + 0xAE1A0);
+	auto Shader_GetPropertyName_addr = (void*)((uintptr_t)unityplayer_module + 0xADA60);
 
 	printf("Shader_GetPropertyName_addr at %p\n", Shader_GetPropertyName_addr);
 
 	MH_CreateHook((LPVOID)Shader_GetPropertyName_addr, Shader_GetPropertyName_hook, &Shader_GetPropertyName_orig);
 	MH_EnableHook((LPVOID)Shader_GetPropertyName_addr);
 
-	auto Shader_GetPropertyType_addr = (void*)((uintptr_t)unityplayer_module + 0xAE440);
+	auto Shader_GetPropertyType_addr = (void*)((uintptr_t)unityplayer_module + 0xADD00);
 
 	printf("Shader_GetPropertyType_addr at %p\n", Shader_GetPropertyType_addr);
 
 	MH_CreateHook((LPVOID)Shader_GetPropertyType_addr, Shader_GetPropertyType_hook, &Shader_GetPropertyType_orig);
 	MH_EnableHook((LPVOID)Shader_GetPropertyType_addr);
 
-	auto Shader_GetPropertyNameId_addr = (void*)((uintptr_t)unityplayer_module + 0xAE300);
+	auto Shader_GetPropertyNameId_addr = (void*)((uintptr_t)unityplayer_module + 0xADBC0);
 
 	printf("Shader_GetPropertyNameId_addr at %p\n", Shader_GetPropertyNameId_addr);
 
 	MH_CreateHook((LPVOID)Shader_GetPropertyNameId_addr, Shader_GetPropertyNameId_hook, &Shader_GetPropertyNameId_orig);
 	MH_EnableHook((LPVOID)Shader_GetPropertyNameId_addr);
 
-	auto Renderer_GetPropertyBlock_addr = (void*)((uintptr_t)unityplayer_module + 0xA1C00);
+	auto Renderer_GetPropertyBlock_addr = (void*)((uintptr_t)unityplayer_module + 0xA1490);
 
 	printf("Renderer_GetPropertyBlock_addr at %p\n", Renderer_GetPropertyBlock_addr);
 
 	MH_CreateHook((LPVOID)Renderer_GetPropertyBlock_addr, Renderer_GetPropertyBlock_hook, &Renderer_GetPropertyBlock_orig);
 	MH_EnableHook((LPVOID)Renderer_GetPropertyBlock_addr);
 
-	auto MaterialPropertyBlock_HasPropertyImpl_addr = (void*)((uintptr_t)unityplayer_module + 0x9C3F0);
+	auto MaterialPropertyBlock_HasPropertyImpl_addr = (void*)((uintptr_t)unityplayer_module + 0x9BBE0);
 
 	printf("MaterialPropertyBlock_HasPropertyImpl_addr at %p\n", MaterialPropertyBlock_HasPropertyImpl_addr);
 
 	MH_CreateHook((LPVOID)MaterialPropertyBlock_HasPropertyImpl_addr, MaterialPropertyBlock_HasPropertyImpl_hook, &MaterialPropertyBlock_HasPropertyImpl_orig);
+	
 
 	//il2cpp_symbols::class_print_all_method(il2cpp_symbols::get_class("UnityEngine.CoreModule.dll", "UnityEngine", "Shader"));
 
